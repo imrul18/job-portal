@@ -67,7 +67,7 @@ Route::get('/career-file-list', function (Request $request) {
                     'name' => $file->getFilename(),
                     'path' => $relativePath,
                     'url' => $baseUrl . '/' . $relativePath,
-                    'delete' => route('uploads.delete', ['path' => $relativePath]),
+                    // 'delete' => route('uploads.delete', ['path' => $relativePath]),
                 ];
                 if ($folderName != 'selected') {
                     $obj['mark_as_selected'] = route('uploads.mark-as-selected', ['path' => $relativePath]);
