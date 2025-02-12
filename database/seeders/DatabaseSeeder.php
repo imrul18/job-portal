@@ -27,8 +27,8 @@ class DatabaseSeeder extends Seeder
         ]);
 
         CareerJob::create([
-            'name' => 'Laravel Developer',
-            'slug' => 'laravel-developer',
+            'name' => 'Laravel React Developer',
+            'slug' => 'laravel-react',
         ]);
     }
 }
