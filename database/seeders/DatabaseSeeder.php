@@ -26,7 +26,7 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('imrul'),
         ]);
 
-        CareerJob::factory()->create([
+        CareerJob::create([
             'name' => 'Laravel Developer',
             'slug' => 'laravel-developer',
         ]);
