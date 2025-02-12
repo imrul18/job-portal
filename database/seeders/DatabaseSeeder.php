@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\CareerJob;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -13,11 +14,21 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        User::factory()->create([
+            'name' => 'iftekhar',
+            'email' => 'iftekhar@gmail.com',
+            'password' => bcrypt('iftekhar'),
+        ]);
 
         User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+            'name' => 'imrul',
+            'email' => 'imrul@gmail.com',
+            'password' => bcrypt('imrul'),
+        ]);
+
+        CareerJob::factory()->create([
+            'name' => 'Laravel Developer',
+            'slug' => 'laravel-developer',
         ]);
     }
 }
