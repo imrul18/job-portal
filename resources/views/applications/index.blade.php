@@ -43,6 +43,9 @@
             <select name="status" id="status" class="form-control w-25 d-inline-block">
                 <option value="">All</option>
                 <option value="pending" {{ request('status') == 'pending' ? 'selected' : '' }}>Pending</option>
+                <option value="primary" {{ request('status') == 'primary' ? 'selected' : '' }}>Primary Selected</option>
+                <option value="interview" {{ request('status') == 'interview' ? 'selected' : '' }}>Call
+                    for Interview</option>
                 <option value="approved" {{ request('status') == 'approved' ? 'selected' : '' }}>Approved</option>
                 <option value="rejected" {{ request('status') == 'rejected' ? 'selected' : '' }}>Rejected</option>
             </select>
@@ -86,6 +89,10 @@
                             style="color: {{ $application->status == 'pending' ? 'orange' : ($application->status == 'approved' ? 'green' : ($application->status == 'rejected' ? 'red' : 'black')) }}; font-weight: bold;">
                             <option value="pending" style="color: orange;"
                                 {{ $application->status == 'pending' ? 'selected' : '' }}>Pending</option>
+                            <option value="primary" {{ $application->status == 'primary' ? 'selected' : '' }}>Primary
+                                Selected</option>
+                            <option value="interview" {{ $application->status == 'interview' ? 'selected' : '' }}>Call
+                                for Interview</option>
                             <option value="approved" style="color: green;"
                                 {{ $application->status == 'approved' ? 'selected' : '' }}>Approved</option>
                             <option value="rejected" style="color: red;"
