@@ -14,6 +14,7 @@
 
         <div class="w-full max-w-4xl p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
             <h1 class="text-5xl font-semibold text-center mb-6">Cityzen Engineering LTD</h1>
+            <h3>{{ $job->name }}</h3>
 
             <!-- Display Validation Errors -->
             @if ($errors->any())
@@ -32,7 +33,7 @@
                 @csrf
                 <div class="flex flex-col lg:flex-row gap-6">
                     <div class="w-full lg:w-1/2">
-                        <input type="hidden" name="slug" value="{{ old('slug', $slug) }}">
+                        <input type="hidden" name="slug" value="{{ old('slug', $job->slug) }}">
 
                         <div class="mb-4">
                             <label for="name"

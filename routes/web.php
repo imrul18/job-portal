@@ -24,7 +24,7 @@ Route::get('/career/{slug}', function (Request $request, $slug) {
     if (!$job) {
         abort(404);
     }
-    return view('career', ['slug' => $job->slug]);
+    return view('career', ['job' => $job]);
 })->name('uploads.index');
 
 Route::post('/career', function (Request $request) {
