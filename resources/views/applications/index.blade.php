@@ -97,7 +97,6 @@
                                 {{ $application->status == 'approved' ? 'selected' : '' }}>Approved</option>
                             <option value="rejected" style="color: red;"
                                 {{ $application->status == 'rejected' ? 'selected' : '' }}>Rejected</option>
-
                         </select>
                     </td>
                 </tr>
