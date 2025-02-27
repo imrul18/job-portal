@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('career_jobs', function (Blueprint $table) {
             $table->id();
+            $table->string('company')->default('Aetherix Limited');
             $table->string('name');
             $table->string('slug');
             $table->timestamps();

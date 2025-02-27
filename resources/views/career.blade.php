@@ -13,7 +13,7 @@
     <div class="flex items-center justify-center mt-4">
 
         <div class="w-full max-w-4xl p-6 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
-            <h1 class="text-5xl font-semibold text-center mb-6">Citizen Engineering LTD</h1>
+            <h1 class="text-5xl font-semibold text-center mb-6">{{ $job->company }}</h1>
             <h3 class="text-3xl font-semibold text-center mb-6">{{ $job->name }}</h3>
 
             <!-- Display Validation Errors -->

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class CareerJob extends Model
 {
-    protected $fillable = ['name', 'slug'];
+    protected $fillable = ['company', 'name', 'slug'];
 
     public function applyLists()
     {
