@@ -28,6 +28,10 @@ Route::get('/career/{slug}', function (Request $request, $slug) {
 })->name('uploads.index');
 
 Route::post('/career', function (Request $request) {
+    if (empty($request->input('name'))) {
+        return redirect()->back()->withInput()->with('error', 'Please provide your name');
+    }
+
     if (empty($request->input('phone')) && empty($request->input('email'))) {
         return redirect()->back()->withInput()->with('error', 'Provide at least one contact information');
     }
