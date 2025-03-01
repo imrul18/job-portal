@@ -39,7 +39,11 @@ Route::post('/career', function (Request $request) {
         return redirect()->back()->withInput()->with('error', 'Wrong job information');
     }
 
-    if ($job->applyLists()->where('email', $request->input('email'))->orWhere('phone', $request->input('phone'))->exists()) {
+    if (!empty($request->input('email')) && $job->applyLists()->where('email', $request->input('email'))->exists()) {
+        return redirect()->back()->withInput()->with('error', 'You have already applied for this job');
+    }
+
+    if (!empty($request->input('phone')) && $job->applyLists()->where('phone', $request->input('phone'))->exists()) {
         return redirect()->back()->withInput()->with('error', 'You have already applied for this job');
     }
 
